@@ -1,4 +1,4 @@
 'use strict';
 
 angular
-  .module('biolabsApp', []);
+  .module('biolabsApp', ["leaflet-directive"]);
