@@ -1,14 +1,13 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
+    <li class="active"><a ui-sref="map">Home</a></li>
+    <li><a ui-sref="add-lab">Add a lab</a></li>
+    <li><a ui-sref="contact">Contact</a></li>
   </ul>
   <h3 class="text-muted">Biolabs search engine</h3>
 </div>
 
-<leaflet defaults="defaults" markers="markers" height="480px" width="100%"></leaflet>
-
+<div ui-view></div>
 
 <div class="footer">
   <p><span class="glyphicon glyphicon-heart"></span> from <a href="http://twitter.com/rgarrigues">@rgarrigues</a></p>
