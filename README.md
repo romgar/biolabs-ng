@@ -16,6 +16,8 @@ This project is generated using Yeoman (http://yeoman.io/)
 
 ### Adding leaflet dependency
 
+**WARNING: these following lines are deprecated from leaflet v0.7.3, which has now a correct bower installation**
+
 Leaflet support for bower is not correct actually (https://github.com/Leaflet/Leaflet/issues/1903)
 To make it work properly in this project, waiting bug fix, steps are :
 
