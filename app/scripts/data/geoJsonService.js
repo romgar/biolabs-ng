@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('biolabsApp')
   .service('GeoJsonService', ['$q', function($q) {
 
