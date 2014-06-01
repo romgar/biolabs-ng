@@ -10,9 +10,14 @@ biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
   // Now set up the states
   $stateProvider
     .state('map', {
-      url: '/map',
-      templateUrl: 'partials/map.html',
-      controller: 'mapController'
+        url: '/map',
+        templateUrl: 'partials/map.html',
+        controller: 'mapController',
+        resolve: {
+            markers: function(GeoJsonService) {
+                return GeoJsonService.getData();
+            }
+        }
     })
     .state('add-lab', {
       url: '/add-lab',

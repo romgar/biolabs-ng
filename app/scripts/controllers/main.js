@@ -2,14 +2,9 @@
 
 var biolabsApp = angular.module('biolabsApp'); 
 
-biolabsApp.controller('mapController', function ($scope, GeoJsonService) {
+biolabsApp.controller('mapController', function ($scope, GeoJsonService, markers) {
     $scope.message = "map";
-
-    GeoJsonService.getData()
-    .then(function(result) {
-        $scope.markers = result;
-        console.log($scope.markers);
-    });
+    $scope.markers = markers;
 });
 
 
