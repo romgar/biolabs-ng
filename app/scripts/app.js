@@ -25,9 +25,18 @@ biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
         controller: 'contactController'
       });
 
-    $locationProvider.html5Mode(true);
+    //$locationProvider.html5Mode(true);
 
 })
-.run(function($state) {
+.run(function($state, $rootScope) {
+
    $state.transitionTo('map');
+
+   $rootScope.$on('$stateChangeError', function (evt, to, toParams, from, fromParams, error) {
+        if (error.message) {
+            console.error("$stateChangeError : " + error.message);
+        } else {
+            console.error("$stateChangeError : " + JSON.stringify(error));
+        }
+    });
 });
