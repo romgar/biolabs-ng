@@ -26,8 +26,7 @@ biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
     })
     .state('contact', {
       url: '/contact',
-        templateUrl: 'partials/contact.html',
-        controller: 'contactController'
+        templateUrl: 'partials/contact.html'
       });
 
     //$locationProvider.html5Mode(true);
