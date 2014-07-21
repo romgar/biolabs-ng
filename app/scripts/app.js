@@ -1,7 +1,7 @@
 'use strict';
 
 var biolabsApp = angular
-  .module('biolabsApp', ['leaflet-directive', 'ui.router']);
+  .module('biolabsApp', ['leaflet-directive', 'ui.router', 'ngResource', 'biolabSettings']);
 
 biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
    // For any unmatched url, redirect to /map
