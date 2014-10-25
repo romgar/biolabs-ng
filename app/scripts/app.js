@@ -3,7 +3,7 @@
 var biolabsApp = angular
   .module('biolabsApp', ['leaflet-directive', 'ui.router', 'ngResource', 'biolabSettings']);
 
-biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider, $resourceProvider) {
    // For any unmatched url, redirect to /map
   $urlRouterProvider.otherwise('/map');
   //
@@ -30,6 +30,7 @@ biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
       });
 
     //$locationProvider.html5Mode(true);
+    $resourceProvider.defaults.stripTrailingSlashes = false;
 
 })
 .run(function($state, $rootScope) {
