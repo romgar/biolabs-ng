@@ -9,6 +9,6 @@ var biolabSettings = angular.module('biolabSettings', []);
 
 
 biolabSettings.constant('settings', {
-    API_ENDPOINT: 'http://apiendpoint.com'
+    API_ENDPOINT: 'http://api.biolabs.youkidea.com/labs/'
 
 });
