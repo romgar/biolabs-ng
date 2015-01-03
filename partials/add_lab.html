@@ -1,0 +1,38 @@
+
+<div class="container">
+    <div>
+        <h1>Add a lab !</h1>
+    </div>
+
+    <div>
+      <form novalidate class="simple-form" role="form">
+        <div class="form-group">
+            <label for="lab-name">Name:</label>
+            <input id="lab-name" type="text" ng-model="lab.name" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="lab-description">Description:</label>
+            <input id="lab-description" type="text" ng-model="lab.description" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="lab-adress">Adress:</label>
+            <input id="lab-adress" type="text" ng-model="lab.adress" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="lab-url">Site URL:</label>
+            <input id="lab-url" type="text" ng-model="lab.url" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="lab-latitude">Latitude:</label>
+            <input id="lab-latitude" type="text" ng-model="lab.latitude" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="lab-longitude">Longitude:</label>
+            <input id="lab-longitude" type="text" ng-model="lab.longitude" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="save(lab)">Propose</button>
+      </form>
+
+      <pre>form = {{lab | json}}</pre>
+    </div>
+</div>
