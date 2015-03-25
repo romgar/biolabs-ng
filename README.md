@@ -34,3 +34,12 @@ To make it work properly in this project, waiting bug fix, steps are :
 - Last, add this attribute to bower generated ".bower.json" file in bower_components/leaflet directory:
 
 	- `"main": "dist/leaflet-src.js"`
+
+
+### Local development, to simplify workflow with GitHub pages
+
+- Clone `biolabs-ng` and checkout to `master`
+- Clone (again!) `biolabs-ng` in `biolabs-ng` folder
+- Checkout to `gh-pages` in second `biolabs-ng` folder
+- Create a symlink named `app` to `biolabs-ng` folder
+- `grunt serve`
