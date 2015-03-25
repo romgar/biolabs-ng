@@ -15877,3 +15877,8 @@ body {
     border-bottom: 0;
   }
 }
+/* line 97, main.scss */
+label.required:after {
+  content: '*';
+  color: red;
+}

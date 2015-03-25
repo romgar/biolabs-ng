@@ -93,3 +93,8 @@ body {
         border-bottom: 0;
     }
 }
+
+label.required:after {
+    content: '*';
+    color: red;
+}
