@@ -27,8 +27,8 @@ angular.module('biolabsApp')
             deferred = $q.defer(),
             _this = this;
 
-        LabsResource.get(function(data) {
-            var results = data.results;
+        LabsResource.query(function(data) {
+            var results = data;
             deferred.resolve(_this.convertAPIDataToMarkers(results));
         })
 
