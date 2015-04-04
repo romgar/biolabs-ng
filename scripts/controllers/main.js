@@ -3,15 +3,15 @@
 var biolabsApp = angular.module('biolabsApp'); 
 
 biolabsApp.controller('mapController', function ($scope, GeoJsonService, markers, leafletData) {
-    $scope.markers = markers;
 
     leafletData.getMap().then(function(map) {
-      var lmarkers = [];
+      var markersCluster = L.markerClusterGroup();
       angular.forEach(markers, function(marker) {
-        lmarkers.push(new L.marker([marker.lat, marker.lng]));
+          var marker = new L.marker([marker.lat, marker.lng]);
+          markersCluster.addLayer(marker);
       });
-      var group = new L.featureGroup(lmarkers);
-      map.fitBounds(group.getBounds());
+      map.fitBounds(markersCluster.getBounds());
+      map.addLayer(markersCluster);
     });
 });
 
