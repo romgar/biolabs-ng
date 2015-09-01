@@ -23,32 +23,37 @@ gulp.task('connect-dist', function () {
 
 
 gulp.task('clean', function() {
-    gulp.src('./dist/*')
+  return gulp.src('./dist/*')
       .pipe(clean({force: true}));
 });
 
-gulp.task('copy-css', function() {
-  var opts = {comments:true,spare:true};
+gulp.task('copy-css', ['clean'], function() {
   gulp.src(['./app/**/*.css', '!./app/bower_components/**'])
     .pipe(gulp.dest('./dist/'))
 });
 
-gulp.task('copy-js', function() {
+gulp.task('copy-js', ['clean'], function() {
   gulp.src(['./app/**/*.js', '!./app/bower_components/**'])
     .pipe(gulp.dest('./dist/'))
 });
 
-gulp.task('copy-bower-components', function () {
+gulp.task('copy-bower-components', ['clean'], function () {
   gulp.src('./app/bower_components/**')
     .pipe(gulp.dest('dist/bower_components'));
 });
 
-gulp.task('copy-html-files', function () {
+gulp.task('copy-html-files', ['clean'], function () {
   gulp.src('./app/**/*.html')
     .pipe(gulp.dest('dist/'));
 });
 
+gulp.task('copy-site-files', ['clean'], function () {
+  gulp.src(['./app/CNAME', './app/favicon.ico', './app/robots.txt'])
+    .pipe(gulp.dest('dist/'));
+});
+
+
 // build task
 gulp.task('build',
-  ['copy-css', 'copy-js', 'copy-html-files', 'copy-bower-components']
+  ['copy-css', 'copy-js', 'copy-html-files', 'copy-bower-components', 'copy-site-files']
 );
