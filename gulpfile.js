@@ -10,7 +10,8 @@ var clean = require('gulp-clean');
 gulp.task('connect', function () {
   connect.server({
     root: 'app/',
-    port: 8888
+    port: 8888,
+    livereload: true
   });
 });
 
