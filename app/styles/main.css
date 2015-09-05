@@ -5259,4 +5259,7 @@ label.required:after {
   content: "*";
   color: red; }
 
+.ngdialog.ngdialog-theme-default {
+  padding-top: 20px; }
+
 /*# sourceMappingURL=main.css.map */
