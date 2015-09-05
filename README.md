@@ -1,17 +1,15 @@
 Biolabs-ng
 ==========
 
-This project is generated using Yeoman (http://yeoman.io/)
-
 ### Requirements
 
-- npm (version > 1.2.10) : package manager to get `bower` and `grunt` Node.js scripts
+- npm (version > 1.2.10) : package manager to get `bower` and `gulp` Node.js scripts
 - bower (`npm install -g bower`) : package manager to manage project js dependencies
-- grunt (`npm install -g grunt-cli`)
+- gulp (`npm install -g gulp`)
 
     - `$ npm install`
     - `$ bower install`
-    - `$ grunt serve`
+    - `$ gulp connect`
     - look your browser
 
 ### Adding leaflet dependency
@@ -36,10 +34,8 @@ To make it work properly in this project, waiting bug fix, steps are :
 	- `"main": "dist/leaflet-src.js"`
 
 
-### Local development, to simplify workflow with GitHub pages
+### Local development, to simplify the deployment workflow with GitHub pages
 
-- Clone `biolabs-ng` and checkout to `master`
-- Clone (again!) `biolabs-ng` in `biolabs-ng` folder
-- Checkout to `gh-pages` in second `biolabs-ng` folder
-- Create a symlink named `app` to `biolabs-ng` folder
-- `grunt serve`
+- Deploy a new version of the project on GitHub Pages :
+
+    - `$ make github`
