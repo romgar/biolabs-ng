@@ -19,14 +19,13 @@ biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
             }
         }
     })
-    .state('add-lab', {
+    .state('map.add-lab', {
       url: '/add-lab',
-      templateUrl: 'partials/add_lab.html',
-      controller: 'addLabController'
+      controller: 'blAddLabController'
     })
-    .state('contact', {
+    .state('map.contact', {
       url: '/contact',
-        templateUrl: 'partials/contact.html'
+      controller: 'blContactUsController'
       });
 
     //$locationProvider.html5Mode(true);
