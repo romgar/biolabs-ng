@@ -15,7 +15,7 @@ angular.module('biolabsApp')
             markers.push({
                 lat: parseFloat(lab.latitude),
                 lng: parseFloat(lab.longitude),
-                message: lab.name + '<br/>' + lab.description + '<br/>' + lab.adress
+                message: lab.name + '<br/>' + lab.adress
             })
         });
 
