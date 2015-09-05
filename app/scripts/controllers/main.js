@@ -5,7 +5,11 @@ var biolabsApp = angular.module('biolabsApp');
 biolabsApp.controller('mapController', function ($scope, GeoJsonService, markers) {
 
     angular.element(document).ready(function () {
-        var map = L.map('map').setView([-41.2858, 174.78682], 14),
+        var southWest = L.latLng(-85, -180),
+            northEast = L.latLng(85, 180),
+            wholeWorldBounds = L.latLngBounds(southWest, northEast);
+
+        var map = L.map('map', {minZoom: 2, maxBounds: wholeWorldBounds}),
         mapLink =
             '<a href="http://openstreetmap.org">OpenStreetMap</a>';
         L.tileLayer(
