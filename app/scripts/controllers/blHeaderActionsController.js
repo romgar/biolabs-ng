@@ -8,4 +8,10 @@ biolabsApp.controller('blHeaderActionsController', function ($scope, ngDialog) {
         });
     };
 
+    $scope.contactUs = function() {
+        ngDialog.open({
+            template: 'partials/contact.html'
+        });
+    };
+
 });
