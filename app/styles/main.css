@@ -5265,6 +5265,9 @@ label.required:after {
 .nav-pills > li {
   margin: 0 5px; }
 
+.field-error {
+  color: red; }
+
 #alerts-container {
   position: fixed;
   top: 10%;
