@@ -5,6 +5,7 @@ biolabsApp.controller('blAddLabController', function ($state, $scope, $resource,
         template: 'partials/add_lab.html',
         controller: ['$scope', function ($scope) {
             $scope.errors = {};
+
             $scope.save = function (lab) {
                 var LabsResource = $resource(settings.API_ENDPOINT);
 
@@ -14,8 +15,9 @@ biolabsApp.controller('blAddLabController', function ($state, $scope, $resource,
                         $scope.closeThisDialog();
                     }
                 , function(response) {
-                        var errors = response['data'];
-                        angular.forEach(errors, function(value, key) {
+                        $scope.errors = {};
+                        var serverErrors = response['data'];
+                        angular.forEach(serverErrors, function(value, key) {
                           $scope.errors[key] = value[0];
                         });
                     });
