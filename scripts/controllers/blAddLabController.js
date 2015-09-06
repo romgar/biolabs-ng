@@ -1,5 +1,5 @@
 
-biolabsApp.controller('blAddLabController', function ($state, $scope, $resource, $http, settings, ngDialog) {
+biolabsApp.controller('blAddLabController', function ($state, $scope, $resource, $http, settings, ngDialog, $alert, blFlash) {
 
     $scope.lab = {};
 
@@ -20,6 +20,7 @@ biolabsApp.controller('blAddLabController', function ($state, $scope, $resource,
                     }
                 );
                 console.log(lab);
+                blFlash.setMessage('Thanks for your contribution !');
                 $scope.closeThisDialog();
             };
         }]
@@ -27,6 +28,7 @@ biolabsApp.controller('blAddLabController', function ($state, $scope, $resource,
 
     dialog.closePromise.then(function (data) {
         $state.transitionTo('map');
+
     });
 
 });

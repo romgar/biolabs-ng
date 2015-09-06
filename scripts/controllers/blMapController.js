@@ -2,9 +2,10 @@
 
 var biolabsApp = angular.module('biolabsApp'); 
 
-biolabsApp.controller('mapController', function ($scope, GeoJsonService, markers) {
+biolabsApp.controller('mapController', function ($scope, GeoJsonService, markers, $alert, blFlash) {
 
     angular.element(document).ready(function () {
+
         var southWest = L.latLng(-85, -180),
             northEast = L.latLng(85, 180),
             wholeWorldBounds = L.latLngBounds(southWest, northEast);
