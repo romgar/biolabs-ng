@@ -92,3 +92,10 @@ label.required:after {
 .nav-pills > li {
     margin: 0 5px;
 }
+
+#alerts-container {
+    position: fixed;
+    top: 10%;
+    left: 45%;
+    z-index: 1;
+}

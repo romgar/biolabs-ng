@@ -1,7 +1,7 @@
 'use strict';
 
 var biolabsApp = angular
-  .module('biolabsApp', ['ui.router', 'ngResource', 'biolabSettings', 'ngDialog']);
+  .module('biolabsApp', ['ui.router', 'ngResource', 'biolabSettings', 'ngDialog', 'mgcrea.ngStrap', 'mgcrea.ngStrap.modal']);
 
 biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider, $resourceProvider) {
    // For any unmatched url, redirect to /map
@@ -32,7 +32,7 @@ biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
     $resourceProvider.defaults.stripTrailingSlashes = false;
 
 })
-.run(function($state, $rootScope) {
+.run(function($state, $rootScope, $alert, blFlash) {
 
    $state.transitionTo('map');
 
@@ -41,6 +41,21 @@ biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
             console.error("$stateChangeError : " + error.message);
         } else {
             console.error("$stateChangeError : " + JSON.stringify(error));
+        }
+    });
+
+    $rootScope.$on('$stateChangeSuccess', function (evt, to, toParams, from, fromParams, error) {
+        var message = blFlash.getMessage();
+        if (!!message) {
+            $alert({
+                duration: 3,
+                content: message,
+                placement: 'top',
+                type: 'info',
+                show: true,
+                container: "#alerts-container",
+                dismissable: false
+            });
         }
     });
 });
