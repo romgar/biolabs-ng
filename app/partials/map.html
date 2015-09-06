@@ -1,4 +1,8 @@
 
+<div class="alert flash-message" ng-show="flash.getMessage()">
+    <p>{{flash.getMessage()}}</p>
+</div>
+
 <div id="map" class="main-content"></div>
 
 <div ui-view class="sub-content"></div>

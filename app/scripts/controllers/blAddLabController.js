@@ -1,5 +1,5 @@
 
-biolabsApp.controller('blAddLabController', function ($state, $scope, $resource, $http, settings, ngDialog) {
+biolabsApp.controller('blAddLabController', function ($state, $scope, $resource, $http, settings, ngDialog, blFlash) {
 
     $scope.lab = {};
 
@@ -19,6 +19,7 @@ biolabsApp.controller('blAddLabController', function ($state, $scope, $resource,
                         }
                     }
                 );
+                blFlash.setMessage('Thanks for your contribution !');
                 console.log(lab);
                 $scope.closeThisDialog();
             };

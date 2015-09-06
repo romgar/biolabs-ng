@@ -5265,4 +5265,11 @@ label.required:after {
 .nav-pills > li {
   margin: 0 5px; }
 
+.flash-message {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  background-color: white;
+  z-index: 1; }
+
 /*# sourceMappingURL=main.css.map */
