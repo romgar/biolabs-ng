@@ -2,7 +2,7 @@
 
 var biolabsApp = angular.module('biolabsApp'); 
 
-biolabsApp.controller('mapController', function ($scope, GeoJsonService, markers, $alert, blFlash) {
+biolabsApp.controller('blMapController', function ($scope, GeoJsonService, markers, $alert, blFlash) {
 
     angular.element(document).ready(function () {
 

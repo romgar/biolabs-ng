@@ -12,7 +12,7 @@ biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
     .state('map', {
         url: '/map',
         templateUrl: 'partials/map.html',
-        controller: 'mapController',
+        controller: 'blMapController',
         resolve: {
             markers: function(GeoJsonService) {
                 return GeoJsonService.getData();
