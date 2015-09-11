@@ -30,7 +30,9 @@ angular.module('biolabsApp')
         LabsResource.query(function(data) {
             var results = data;
             deferred.resolve(_this.convertAPIDataToMarkers(results));
-        })
+        }, function(error) {
+            deferred.reject(error);
+        });
 
         return deferred.promise;
     };
