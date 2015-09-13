@@ -28,9 +28,10 @@ biolabsApp.controller('blMapController', function ($scope, GeoJsonService, blFla
             map.fitBounds(markersCluster.getBounds());
             map.addLayer(markersCluster);
         }, function(error) {
-            map.setView([51.505, -0.09], 13);
+            map.setView([51.505, -0.09], 2);
             blFlash.instantMessage('danger', 'Connection error. Labs are not available');
         });
     });
 });
+
 
