@@ -103,3 +103,12 @@ label.required:after {
     left: 45%;
     z-index: 1;
 }
+
+.last-labs {
+    position: fixed;
+    bottom: 5%;
+    right: 0;
+    background: white;
+    width: 20%;
+    max-height: 80%
+}
