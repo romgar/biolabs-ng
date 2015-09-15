@@ -21,7 +21,7 @@ biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
     .state('map.contact', {
       url: '/contact',
       controller: 'blContactUsController'
-      });
+    });
 
     //$locationProvider.html5Mode(true);
     $resourceProvider.defaults.stripTrailingSlashes = false;
