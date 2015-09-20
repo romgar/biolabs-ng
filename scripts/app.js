@@ -12,12 +12,7 @@ biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
     .state('map', {
         url: '/map',
         templateUrl: 'partials/map.html',
-        controller: 'blMapController',
-        resolve: {
-            markers: function(GeoJsonService) {
-                return GeoJsonService.getData();
-            }
-        }
+        controller: 'blMapController'
     })
     .state('map.add-lab', {
       url: '/add-lab',
@@ -26,7 +21,7 @@ biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
     .state('map.contact', {
       url: '/contact',
       controller: 'blContactUsController'
-      });
+    });
 
     //$locationProvider.html5Mode(true);
     $resourceProvider.defaults.stripTrailingSlashes = false;

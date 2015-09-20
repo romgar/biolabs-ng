@@ -8,6 +8,8 @@ angular.module('biolabsApp')
 ])
 .service('GeoJsonService', ['$q', '$http', '$resource', 'settings', function($q, $http, $resource, settings) {
 
+    var _this = this;
+
     this.convertAPIDataToMarkers = function(data) {
         var markers = [];
 
@@ -22,15 +24,27 @@ angular.module('biolabsApp')
         return markers;
     };
 
-    this.getData = function() {
+    this.getLabs = function() {
         var LabsResource = $resource(settings.API_ENDPOINT),
-            deferred = $q.defer(),
-            _this = this;
+            deferred = $q.defer();
 
         LabsResource.query(function(data) {
-            var results = data;
-            deferred.resolve(_this.convertAPIDataToMarkers(results));
-        })
+            deferred.resolve(data);
+        }, function(error) {
+            deferred.reject(error);
+        });
+
+        return deferred.promise;
+    };
+
+    this.getData = function() {
+        var deferred = $q.defer();
+
+        _this.getLabs().then(function(labs) {
+            deferred.resolve(_this.convertAPIDataToMarkers(labs));
+        }, function(error) {
+            deferred.reject(error);
+        });
 
         return deferred.promise;
     };

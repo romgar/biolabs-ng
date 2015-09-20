@@ -9,6 +9,15 @@
 
 <div ui-view class="main-content"></div>
 
+<div ng-controller="blLastLabController" class="last-labs">
+  <ul>
+    <h2>Last added labs</h2>
+    <li ng-repeat="lab in labs">
+      {{ lab.name }}
+    </li>
+  </ul>
+</div>
+
 <div class="footer">
   <p><span class="glyphicon glyphicon-heart"></span> from <a href="http://twitter.com/rgarrigues">@rgarrigues</a></p>
 </div>
