@@ -5277,9 +5277,18 @@ label.required:after {
 .last-labs {
   position: fixed;
   bottom: 5%;
-  right: 0;
+  right: 10px;
   background: white;
   width: 20%;
-  max-height: 80%; }
+  max-height: 80%;
+  overflow: hidden;
+  padding: 10px; }
+  .last-labs h2 {
+    margin-top: 0; }
+  .last-labs ul {
+    padding: 0; }
+
+ul {
+  list-style: none; }
 
 /*# sourceMappingURL=main.css.map */
