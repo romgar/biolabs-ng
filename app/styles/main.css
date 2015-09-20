@@ -5287,6 +5287,8 @@ label.required:after {
     margin-top: 0; }
   .last-labs ul {
     padding: 0; }
+  .last-labs li {
+    border-bottom: 1px solid black; }
 
 ul {
   list-style: none; }
