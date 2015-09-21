@@ -3,20 +3,12 @@
     <li class="active"><button class="btn btn-info" ui-sref="map">Home</button></li>
     <li><button class="btn btn-info" ui-sref="map.add-lab">Add a lab</button></li>
     <li><button class="btn btn-info" ui-sref="map.contact">Contact</button></li>
+    <li><button class="btn btn-info" ui-sref="map.search-lab">Search</button></li>
   </ul>
   <h3 class="text-muted"><a href="/">Biolabs search engine</a></h3>
 </div>
 
 <div ui-view class="main-content"></div>
-
-<div ng-controller="blLastLabController" class="last-labs">
-  <ul>
-    <h2>Last added labs</h2>
-    <li ng-repeat="lab in labs">
-      {{ lab.name }}
-    </li>
-  </ul>
-</div>
 
 <div class="footer">
   <p><span class="glyphicon glyphicon-heart"></span> from <a href="http://twitter.com/rgarrigues">@rgarrigues</a></p>
