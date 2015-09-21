@@ -29,7 +29,9 @@ biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
     });
 
 
-    //$locationProvider.html5Mode(true);
+    // use the HTML5 History API
+    $locationProvider.html5Mode(true);
+
     $resourceProvider.defaults.stripTrailingSlashes = false;
 
 })
