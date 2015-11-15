@@ -19,7 +19,10 @@ biolabsApp.controller('blMapController', function ($scope, GeoJsonService, blFla
                 maxZoom: 18
             }).addTo(map);
 
-        GeoJsonService.getData().then(function(markers) {
+        GeoJsonService.getLabs().then(function(labs) {
+            $scope.labs = labs;
+            var markers = GeoJsonService.convertAPIDataToMarkers(labs);
+
             var markersCluster = L.markerClusterGroup();
             angular.forEach(markers, function (marker) {
                 var marker = L.marker([marker.lat, marker.lng]).bindPopup(marker.message);

@@ -28,10 +28,6 @@ biolabsApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
       controller: 'blLastLabController'
     });
 
-
-    // use the HTML5 History API
-    $locationProvider.html5Mode(true);
-
     $resourceProvider.defaults.stripTrailingSlashes = false;
 
 })

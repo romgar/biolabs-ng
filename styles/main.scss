@@ -104,29 +104,33 @@ label.required:after {
     z-index: 1;
 }
 
-.last-labs {
+.search-area {
     position: fixed;
-    bottom: 5%;
-    right: 10px;
-    background: white;
-    width: 20%;
+    top: 60px;
+    right: 20px;
+    background: transparent;
+    width: 25%;
     max-height: 80%;
     overflow: hidden;
-    padding: 10px;
 
-    h2 {
+    h4 {
         margin-top: 0;
     }
 
-    ul {
-        padding: 0;
-    }
-
-    li {
-        border-bottom: 1px solid black;
+    & > div {
+        background: white;
+        padding: 10px;
+        margin-bottom: 10px
     }
 }
 
-ul {
-    list-style: none;
+.search .form-group {
+    margin-bottom: 0;
 }
+
+.last-labs {
+    table td {
+        padding: 5px;
+    }
+}
+

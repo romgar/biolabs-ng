@@ -5274,23 +5274,25 @@ label.required:after {
   left: 45%;
   z-index: 1; }
 
-.last-labs {
+.search-area {
   position: fixed;
-  bottom: 5%;
-  right: 10px;
-  background: white;
-  width: 20%;
+  top: 60px;
+  right: 20px;
+  background: transparent;
+  width: 25%;
   max-height: 80%;
-  overflow: hidden;
-  padding: 10px; }
-  .last-labs h2 {
+  overflow: hidden; }
+  .search-area h4 {
     margin-top: 0; }
-  .last-labs ul {
-    padding: 0; }
-  .last-labs li {
-    border-bottom: 1px solid black; }
+  .search-area > div {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px; }
 
-ul {
-  list-style: none; }
+.search .form-group {
+  margin-bottom: 0; }
+
+.last-labs table td {
+  padding: 5px; }
 
 /*# sourceMappingURL=main.css.map */
