@@ -108,15 +108,24 @@ label.required:after {
     position: fixed;
     top: 60px;
     right: 20px;
-    background: white;
+    background: transparent;
     width: 25%;
     max-height: 80%;
     overflow: hidden;
-    padding: 10px;
 
-    h2 {
+    h4 {
         margin-top: 0;
     }
+
+    & > div {
+        background: white;
+        padding: 10px;
+        margin-bottom: 10px
+    }
+}
+
+.search .form-group {
+    margin-bottom: 0;
 }
 
 .last-labs {
@@ -125,6 +134,3 @@ label.required:after {
     }
 }
 
-ul {
-    list-style: none;
-}

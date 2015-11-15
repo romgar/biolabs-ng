@@ -5278,18 +5278,21 @@ label.required:after {
   position: fixed;
   top: 60px;
   right: 20px;
-  background: white;
+  background: transparent;
   width: 25%;
   max-height: 80%;
-  overflow: hidden;
-  padding: 10px; }
-  .search-area h2 {
+  overflow: hidden; }
+  .search-area h4 {
     margin-top: 0; }
+  .search-area > div {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px; }
+
+.search .form-group {
+  margin-bottom: 0; }
 
 .last-labs table td {
   padding: 5px; }
-
-ul {
-  list-style: none; }
 
 /*# sourceMappingURL=main.css.map */
