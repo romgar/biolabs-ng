@@ -5295,4 +5295,10 @@ label.required:after {
 .last-labs table td {
   padding: 5px; }
 
+.form-left {
+  padding-left: 0; }
+
+.form-right {
+  padding-right: 0; }
+
 /*# sourceMappingURL=main.css.map */
