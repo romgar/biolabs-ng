@@ -5285,10 +5285,9 @@ label.required:after {
   padding: 10px; }
   .search-area h2 {
     margin-top: 0; }
-  .search-area ul {
-    padding: 0; }
-  .search-area li {
-    border-bottom: 1px solid black; }
+
+.last-labs table td {
+  padding: 5px; }
 
 ul {
   list-style: none; }

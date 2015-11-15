@@ -7,11 +7,13 @@
     </form>
   </div>
   <div class="last-labs">
-    <ul>
       <h2>Last added labs</h2>
-      <li ng-repeat="lab in labs">
-        {{ lab.name }}
-      </li>
-    </ul>
+      <table class="table-striped table-bordered table-hover">
+        <tbody>
+        <tr ng-repeat="lab in labs">
+          <td>{{ lab.name }}</td>
+        </tr>
+        </tbody>
+      </table>
   </div>
 </div>
