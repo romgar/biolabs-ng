@@ -27,6 +27,11 @@
             <input id="lab-url" type="text" ng-model="lab.url" class="form-control"/>
         </div>
         <div class="form-group">
+            <label for="lab-country">Country:</label>
+            <div class="field-error">{{errors.country}}</div>
+            <input id="lab-country" type="text" ng-model="lab.country" class="form-control"/>
+        </div>
+        <div class="form-group">
             <label for="lab-latitude">Latitude:</label>
             <div class="field-error">{{errors.latitude}}</div>
             <input id="lab-latitude" type="text" ng-model="lab.latitude" class="form-control"/>

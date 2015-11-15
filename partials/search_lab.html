@@ -11,6 +11,7 @@
       <table class="table-striped table-bordered table-hover">
         <tbody>
         <tr ng-repeat="lab in labs">
+          <td><span class="flag-icon flag-icon-{{lab.country | lowercase}}"></span></td>
           <td>{{ lab.name }}</td>
         </tr>
         </tbody>
