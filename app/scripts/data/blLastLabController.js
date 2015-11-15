@@ -1,6 +1,6 @@
 
 biolabsApp.controller('blLastLabController', function($scope, GeoJsonService) {
 
-    $scope.labs = $scope.labs.slice(0, 10);
+    $scope.labs = $scope.labs.slice(0, 5);
 
 });
