@@ -5274,7 +5274,7 @@ label.required:after {
   left: 45%;
   z-index: 1; }
 
-.last-labs {
+.search-area {
   position: fixed;
   bottom: 5%;
   right: 10px;
@@ -5283,11 +5283,11 @@ label.required:after {
   max-height: 80%;
   overflow: hidden;
   padding: 10px; }
-  .last-labs h2 {
+  .search-area h2 {
     margin-top: 0; }
-  .last-labs ul {
+  .search-area ul {
     padding: 0; }
-  .last-labs li {
+  .search-area li {
     border-bottom: 1px solid black; }
 
 ul {

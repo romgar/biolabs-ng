@@ -1,9 +1,17 @@
-
-<div class="last-labs">
-  <ul>
-    <h2>Last added labs</h2>
-    <li ng-repeat="lab in labs">
-      {{ lab.name }}
-    </li>
-  </ul>
+<div class="search-area">
+  <div class="search">
+    <form action=".">
+      <div class="form-group">
+        <input type="search" id="search-value" placeholder="Search"/>
+      </div>
+    </form>
+  </div>
+  <div class="last-labs">
+    <ul>
+      <h2>Last added labs</h2>
+      <li ng-repeat="lab in labs">
+        {{ lab.name }}
+      </li>
+    </ul>
+  </div>
 </div>
