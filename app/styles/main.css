@@ -5276,8 +5276,8 @@ label.required:after {
 
 .search-area {
   position: fixed;
-  bottom: 5%;
-  right: 10px;
+  top: 60px;
+  right: 20px;
   background: white;
   width: 20%;
   max-height: 80%;
